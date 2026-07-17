@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREEEROUBUX.com</title>
+
+<style>
+body{
+    margin:0;
+    background:#0f172a;
+    color:white;
+    font-family:Arial,Helvetica,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.container{
+    width:90%;
+    max-width:650px;
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,255,120,.25);
+}
+
+h1{
+    color:#22c55e;
+}
+
+#status{
+    margin-top:20px;
+    font-size:24px;
+    color:#facc15;
+    min-height:40px;
+}
+
+.progress{
+    width:100%;
+    height:22px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+    margin-top:20px;
+}
+
+.bar{
+    width:0%;
+    height:100%;
+    background:#22c55e;
+    transition:width 1s;
+}
+
+.final{
+    display:none;
+    margin-top:25px;
+}
+
+.final h2{
+    color:#22c55e;
+}
+
+.warning{
+    color:#ff4444;
+    font-size:32px;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎮 FREEEROUBUX.com 🎮</h1>
+
+<p>Generating your FREE Robux...</p>
+
+<div id="status">Starting...</div>
+
+<div class="progress" id="progress">
+    <div class="bar" id="bar"></div>
+</div>
+
+<div class="final" id="final">
+    <h2>😂 YOU'VE BEEN PRANKED!</h2>
+
+    <p><strong>No hacking happened.</strong></p>
+
+    <p>Websites claiming they can hack accounts or generate free Robux are almost always scams.</p>
+
+    <p><strong>Always think twice before clicking suspicious links or entering your login details.</strong></p>
+
+    <p>This page is for educational purposes only. Stay safe online! 🛡️</p>
+</div>
+
+</div>
+
+<script>
+
+const messages = [
+"Connecting to Roblox servers...",
+"Searching for unlimited Robux...",
+"Bypassing imaginary security...",
+"Preparing download...",
+"Loading..."
+];
+
+let index = 0;
+let progress = 0;
+
+const status = document.getElementById("status");
+const bar = document.getElementById("bar");
+
+const timer = setInterval(()=>{
+
+    if(index < messages.length){
+
+        status.innerHTML = messages[index];
+        progress += 20;
+        bar.style.width = progress + "%";
+        index++;
+
+    }else{
+
+        clearInterval(timer);
+
+        bar.style.width="100%";
+
+        status.innerHTML =
+        "<div class='warning'>⚠️ HACKING IS IN PROCESS... ⚠️</div>";
+
+        setTimeout(()=>{
+
+            document.getElementById("progress").style.display="none";
+            status.style.display="none";
+
+            document.getElementById("final").style.display="block";
+
+        },4000);
+
+    }
+
+},1500);
+
+</script>
+
+</body>
+</html>
+
+
+
